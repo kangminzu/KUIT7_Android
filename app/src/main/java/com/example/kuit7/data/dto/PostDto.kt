@@ -11,6 +11,13 @@ data class PostDto(
     val body: String
 )
 
+@Serializable
+data class PostRequestDto(
+    val title: String,
+    val body: String,
+    val userId: Int
+)
+
 fun PostDto.toDomain(): Post = Post(
     id = id,
     userId = userId,
